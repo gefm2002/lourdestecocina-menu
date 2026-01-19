@@ -51,9 +51,9 @@ export const HeaderSticky = ({ site, onCartClick, onMenuClick }: HeaderStickyPro
           </NavLink>
           <a href="#menu">Menú completo</a>
           <a href="#contacto">Contacto</a>
-          <a href="/admin" className="text-muted">
+          <Link to="/admin" className="text-muted">
             Admin
-          </a>
+          </Link>
         </nav>
 
         <div className="flex items-center gap-3">
