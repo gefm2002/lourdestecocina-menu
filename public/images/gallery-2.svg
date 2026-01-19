@@ -1,0 +1,6 @@
+<svg width="480" height="360" viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="360" rx="28" fill="#F6EFD8"/>
+  <circle cx="160" cy="140" r="80" fill="#C73A2D" opacity="0.18"/>
+  <circle cx="320" cy="200" r="90" fill="#111111" opacity="0.08"/>
+  <text x="240" y="300" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" fill="#2B2B2B">Platos del día</text>
+</svg>

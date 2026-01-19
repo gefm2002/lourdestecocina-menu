@@ -1,0 +1,6 @@
+<svg width="480" height="360" viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="360" rx="28" fill="#F6EFD8"/>
+  <rect x="70" y="90" width="340" height="160" rx="24" fill="#E9E1C6"/>
+  <path d="M110 200C160 150 240 130 320 140" stroke="#6B6B6B" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10"/>
+  <text x="240" y="300" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" fill="#2B2B2B">Veggie &amp; saludables</text>
+</svg>

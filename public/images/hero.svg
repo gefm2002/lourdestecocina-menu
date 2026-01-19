@@ -1,0 +1,11 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#E9E1C6"/>
+  <rect x="80" y="90" width="1040" height="620" rx="36" fill="#F6EFD8"/>
+  <circle cx="260" cy="300" r="140" fill="#C73A2D" opacity="0.12"/>
+  <circle cx="920" cy="520" r="180" fill="#111111" opacity="0.08"/>
+  <path d="M240 510C290 460 350 430 420 430C490 430 570 470 620 520" stroke="#6B6B6B" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10"/>
+  <path d="M720 260C770 210 830 180 900 180C970 180 1050 220 1100 270" stroke="#6B6B6B" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10"/>
+  <rect x="340" y="220" width="520" height="260" rx="24" fill="#FFFFFF" opacity="0.9"/>
+  <text x="600" y="330" text-anchor="middle" font-family="Cinzel, serif" font-size="44" fill="#111111">Manducar</text>
+  <text x="600" y="380" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" fill="#6B6B6B">Comidas caseras</text>
+</svg>

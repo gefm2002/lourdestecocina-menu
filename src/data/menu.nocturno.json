@@ -1,0 +1,260 @@
+{
+  "categories": [
+    {
+      "id": "tortillas",
+      "name": "Tortillas",
+      "order": 1,
+      "isActive": true,
+      "items": [
+        {
+          "id": "tortilla-papa",
+          "name": "Tortilla de papa",
+          "description": "",
+          "price": 6000,
+          "isActive": true,
+          "order": 1,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "tortilla-espanola",
+          "name": "Tortilla a la española",
+          "description": "",
+          "price": 8000,
+          "isActive": true,
+          "order": 2,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "tortilla-papa-espinaca",
+          "name": "Tortilla de papa y espinaca",
+          "description": "",
+          "price": 8000,
+          "isActive": true,
+          "order": 3,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "tortilla-jamon-muzza",
+          "name": "Tortilla de papa rellena de jamón y Muzarella",
+          "description": "",
+          "price": 8000,
+          "isActive": true,
+          "order": 4,
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "tartas",
+      "name": "Tartas",
+      "order": 2,
+      "isActive": true,
+      "items": [
+        {
+          "id": "tarta-jamon-queso",
+          "name": "Jamón y queso",
+          "description": "",
+          "price": 7000,
+          "isActive": true,
+          "order": 1,
+          "tags": []
+        },
+        {
+          "id": "tarta-pollo-puerro",
+          "name": "Pollo puerro panceta",
+          "description": "",
+          "price": 7000,
+          "isActive": true,
+          "order": 2,
+          "tags": []
+        },
+        {
+          "id": "tarta-espinaca",
+          "name": "Espinaca y queso",
+          "description": "",
+          "price": 7000,
+          "isActive": true,
+          "order": 3,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "tarta-calabaza",
+          "name": "Calabaza y queso",
+          "description": "",
+          "price": 7000,
+          "isActive": true,
+          "order": 4,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "tarta-humita",
+          "name": "Humita",
+          "description": "",
+          "price": 7000,
+          "isActive": true,
+          "order": 5,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "tarta-capresse",
+          "name": "Capresse",
+          "description": "",
+          "price": 7000,
+          "isActive": true,
+          "order": 6,
+          "tags": ["veggie"]
+        }
+      ]
+    },
+    {
+      "id": "veggie",
+      "name": "Menú veggie",
+      "order": 3,
+      "isActive": true,
+      "items": [
+        {
+          "id": "zapallitos-rellenos",
+          "name": "Zapallitos rellenos",
+          "description": "",
+          "price": 7500,
+          "isActive": true,
+          "order": 1,
+          "tags": ["veggie", "recomendado"]
+        },
+        {
+          "id": "calabaza-capresse",
+          "name": "Calabaza capresse",
+          "description": "",
+          "price": 7500,
+          "isActive": true,
+          "order": 2,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "wok-verduras",
+          "name": "Wok de verduras",
+          "description": "",
+          "price": 7500,
+          "isActive": true,
+          "order": 3,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "berenjena-napolitana",
+          "name": "Berenjena Napolitana asada",
+          "description": "Con vegetales salteados.",
+          "price": 6500,
+          "isActive": true,
+          "order": 4,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "morron-espinaca",
+          "name": "Morrón asado espinaca muzza y huevo",
+          "description": "",
+          "price": 6500,
+          "isActive": true,
+          "order": 5,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "veggie-provoleta",
+          "name": "Veggie provoleta, morrón y rúcula",
+          "description": "",
+          "price": 7000,
+          "isActive": true,
+          "order": 6,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "risotto-verduras",
+          "name": "Risotto de verduras y champiñones",
+          "description": "",
+          "price": 16000,
+          "isActive": true,
+          "order": 7,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "calabaza-rellena",
+          "name": "Calabaza rellena",
+          "description": "Espinaca, choclo, parmesano y puré de calabaza.",
+          "price": 10000,
+          "isActive": true,
+          "order": 8,
+          "tags": ["veggie", "recomendado"]
+        }
+      ]
+    },
+    {
+      "id": "principales",
+      "name": "Principales",
+      "order": 4,
+      "isActive": true,
+      "items": [
+        {
+          "id": "pan-carne",
+          "name": "Pan de carne",
+          "description": "",
+          "price": 8500,
+          "isActive": true,
+          "order": 1,
+          "tags": ["recomendado"]
+        },
+        {
+          "id": "bife-chorizo",
+          "name": "Bife de chorizo",
+          "description": "",
+          "price": 14000,
+          "isActive": true,
+          "order": 2,
+          "tags": []
+        },
+        {
+          "id": "lomo-grillado",
+          "name": "Lomo grillado",
+          "description": "",
+          "price": 16000,
+          "isActive": true,
+          "order": 3,
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "ensaladas",
+      "name": "Ensaladas",
+      "order": 5,
+      "isActive": true,
+      "items": [
+        {
+          "id": "ensalada-rucula-zanahoria",
+          "name": "Ensalada rúcula y zanahoria",
+          "description": "",
+          "price": 8000,
+          "isActive": true,
+          "order": 1,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "caesar-pollo",
+          "name": "Caesar con pollo",
+          "description": "Mix lechuga, rúcula, crutones y parmesano.",
+          "price": 10000,
+          "isActive": true,
+          "order": 2,
+          "tags": ["recomendado"]
+        },
+        {
+          "id": "capresse",
+          "name": "Capresse",
+          "description": "Boconccino, tomate cherry, albahaca, aceitunas negras y mix lechuga.",
+          "price": 10000,
+          "isActive": true,
+          "order": 3,
+          "tags": ["veggie"]
+        }
+      ]
+    }
+  ]
+}

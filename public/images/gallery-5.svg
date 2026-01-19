@@ -1,0 +1,6 @@
+<svg width="480" height="360" viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="360" rx="28" fill="#E9E1C6"/>
+  <circle cx="150" cy="170" r="90" fill="#C73A2D" opacity="0.12"/>
+  <rect x="230" y="110" width="160" height="120" rx="20" fill="#FFFFFF"/>
+  <text x="240" y="300" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" fill="#2B2B2B">Guarniciones</text>
+</svg>

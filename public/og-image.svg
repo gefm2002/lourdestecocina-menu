@@ -1,0 +1,31 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F7F4EF" />
+  <rect x="80" y="80" width="1040" height="470" rx="40" fill="#FFFFFF" />
+  <circle cx="230" cy="270" r="90" fill="#7A6452" />
+  <path
+    d="M170 310C205 250 270 220 330 220C380 220 420 255 420 300C420 360 350 410 260 410"
+    stroke="#F9F7F3"
+    stroke-width="14"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <text
+    x="380"
+    y="260"
+    fill="#2F2B28"
+    font-size="48"
+    font-family="Inter, Arial, sans-serif"
+    font-weight="600"
+  >
+    Cristian Barucca
+  </text>
+  <text
+    x="380"
+    y="330"
+    fill="#6B635D"
+    font-size="28"
+    font-family="Inter, Arial, sans-serif"
+  >
+    Prevención y abordaje integral de las adicciones
+  </text>
+</svg>

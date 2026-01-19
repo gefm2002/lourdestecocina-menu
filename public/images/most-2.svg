@@ -1,0 +1,7 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" rx="24" fill="#F6EFD8"/>
+  <rect x="70" y="70" width="260" height="120" rx="30" fill="#E9E1C6"/>
+  <path d="M120 130C150 110 190 100 230 100C270 100 300 115 320 140" stroke="#C73A2D" stroke-width="4" stroke-linecap="round"/>
+  <rect x="70" y="200" width="260" height="60" rx="16" fill="#FFFFFF"/>
+  <text x="200" y="238" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#2B2B2B">Tarta de espinaca</text>
+</svg>

@@ -1,0 +1,17 @@
+{
+  "brand": {
+    "name": "Manducar",
+    "tagline": "Comidas caseras",
+    "igHandle": "@manducar_comidas"
+  },
+  "contact": {
+    "whatsapp": "5491179670000",
+    "whatsappDisplay": "11 7967 0000",
+    "phoneDisplay": "11 4731 0897",
+    "address": "Yerbal 5, CABA",
+    "mapQuery": "Yerbal 5, CABA"
+  },
+  "hours": [
+    { "days": "Lunes a Sábado", "time": "11 a 15 hs y 17 a 22 hs" }
+  ]
+}
