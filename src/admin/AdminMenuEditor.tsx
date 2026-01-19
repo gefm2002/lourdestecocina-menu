@@ -352,7 +352,7 @@ const ItemForm = ({
   const [name, setName] = useState(item?.name ?? "");
   const [description, setDescription] = useState(item?.description ?? "");
   const [price, setPrice] = useState(item?.price ?? 0);
-  const [consult, setConsult] = useState(item?.price === null ?? false);
+  const [consult, setConsult] = useState(item?.price === null);
   const [tags, setTags] = useState(item?.tags.join(", ") ?? "");
   const [isActive, setIsActive] = useState(item?.isActive ?? true);
   const [order, setOrder] = useState(item?.order ?? 1);

@@ -83,7 +83,7 @@ export const MenuItemRow = ({
                 Agregar
               </button>
               <span className="text-sm font-semibold text-primary">
-                {formatPrice(item.price * qty)}
+                {formatPrice((item.price ?? 0) * qty)}
               </span>
             </div>
           ) : (
