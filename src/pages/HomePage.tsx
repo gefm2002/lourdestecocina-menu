@@ -36,14 +36,15 @@ export const HomePage = ({ menuType }: HomePageProps) => {
     );
   };
 
-  const handleAddItem = (itemId: string) => {
+  const handleAddItem = (itemId: string, qty: number, image?: string) => {
     const item = itemsById.get(itemId);
     if (!item || item.price === null) return;
     addItem({
       id: item.id,
       name: item.name,
       price: item.price,
-      qty: 1,
+      qty,
+      image,
     });
   };
 
@@ -60,7 +61,7 @@ export const HomePage = ({ menuType }: HomePageProps) => {
   return (
     <main className="space-y-20 pb-20">
       <section className="relative overflow-hidden">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8">
+        <div className="mx-auto grid max-w-6xl gap-10 rounded-ui bg-white/70 px-4 py-16 shadow-sm ring-1 ring-black/5 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8">
           <div className="space-y-6">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-muted">
               {site.brand.name} | {site.brand.tagline}
@@ -93,7 +94,7 @@ export const HomePage = ({ menuType }: HomePageProps) => {
               </a>
               <a
                 href="#menu"
-                className="rounded-full border border-primary px-6 py-3 text-sm font-semibold text-primary"
+                className="rounded-full border border-accent px-6 py-3 text-sm font-semibold text-accent shadow-sm"
               >
                 Ver menú
               </a>
@@ -104,7 +105,7 @@ export const HomePage = ({ menuType }: HomePageProps) => {
           </div>
           <div className="relative">
             <img
-              src="/images/hero.svg"
+              src="/images/stock-1.jpg"
               alt="Comidas caseras Manducar"
               className="w-full rounded-ui border border-black/10"
             />
@@ -122,10 +123,10 @@ export const HomePage = ({ menuType }: HomePageProps) => {
             {destacados.map((item, index) => (
               <div
                 key={item.id}
-                className="overflow-hidden rounded-ui border border-black/10 bg-white"
+                className="overflow-hidden rounded-ui border border-black/10 bg-white shadow-sm"
               >
                 <img
-                  src={`/images/most-${index + 1}.svg`}
+                  src={`/images/stock-${index + 2}.jpg`}
                   alt={item.name}
                   className="h-40 w-full object-cover"
                 />
@@ -133,8 +134,8 @@ export const HomePage = ({ menuType }: HomePageProps) => {
                   <p className="text-sm font-semibold text-primary">{item.name}</p>
                   <button
                     type="button"
-                    className="rounded-full bg-primary px-4 py-2 text-xs font-semibold text-white"
-                    onClick={() => handleAddItem(item.id)}
+                    className="rounded-full bg-accent px-4 py-2 text-xs font-semibold text-white shadow-sm"
+                    onClick={() => handleAddItem(item.id, 1, `/images/stock-${index + 2}.jpg`)}
                   >
                     Agregar
                   </button>
@@ -144,14 +145,14 @@ export const HomePage = ({ menuType }: HomePageProps) => {
           </div>
           <a
             href={whatsappHref}
-            className="inline-flex items-center justify-center rounded-full border border-primary px-4 py-2 text-sm font-semibold text-primary"
+            className="inline-flex items-center justify-center rounded-full border border-primary/40 bg-white px-4 py-2 text-sm font-semibold text-primary"
           >
             Hacer pedido
           </a>
         </div>
       </section>
 
-      <section id="menu" className="mx-auto max-w-6xl space-y-8 px-4 lg:px-8">
+      <section id="menu" className="mx-auto max-w-6xl space-y-8 rounded-ui bg-white/70 px-4 py-10 shadow-sm ring-1 ring-black/5 lg:px-8">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <h2 className="text-3xl font-semibold text-primary">Menú completo</h2>
@@ -162,7 +163,7 @@ export const HomePage = ({ menuType }: HomePageProps) => {
           <MenuTabs />
         </div>
 
-        <div className="grid gap-4 lg:grid-cols-[1fr_auto_auto] lg:items-center">
+        <div className="grid gap-4 rounded-2xl bg-white/80 p-4 ring-1 ring-black/5 lg:grid-cols-[1fr_auto_auto] lg:items-center">
           <input
             className="w-full rounded-full border border-black/10 px-4 py-2 text-sm"
             placeholder="Buscar por nombre o ingrediente"
@@ -188,7 +189,7 @@ export const HomePage = ({ menuType }: HomePageProps) => {
               className={`rounded-full px-3 py-2 text-xs font-semibold ${
                 filters.includes("veggie")
                   ? "bg-primary text-white"
-                  : "border border-black/10 text-primary"
+                  : "border border-primary/30 bg-white text-primary"
               }`}
             >
               Veggie
@@ -199,7 +200,7 @@ export const HomePage = ({ menuType }: HomePageProps) => {
               className={`rounded-full px-3 py-2 text-xs font-semibold ${
                 filters.includes("recomendado")
                   ? "bg-primary text-white"
-                  : "border border-black/10 text-primary"
+                  : "border border-primary/30 bg-white text-primary"
               }`}
             >
               Lo más pedido
@@ -228,54 +229,31 @@ export const HomePage = ({ menuType }: HomePageProps) => {
         </a>
       </section>
 
-      <section className="mx-auto max-w-6xl space-y-6 px-4 lg:px-8">
-        <div>
-          <h2 className="text-3xl font-semibold text-primary">Galería</h2>
-          <p className="text-sm text-muted">Algunas de nuestras opciones caseras.</p>
-        </div>
-        <div className="grid gap-4 md:grid-cols-3">
-          {[1, 2, 3, 4, 5, 6].map((index) => (
-            <img
-              key={index}
-              src={`/images/gallery-${index}.svg`}
-              alt={`Galería Manducar ${index}`}
-              className="h-44 w-full rounded-ui border border-black/10 object-cover"
-            />
-          ))}
-        </div>
-        <a
-          href={whatsappHref}
-          className="inline-flex items-center justify-center rounded-full border border-primary px-4 py-2 text-sm font-semibold text-primary"
-        >
-          Hacer pedido
-        </a>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4 lg:px-8">
+      <section className="mx-auto max-w-6xl rounded-ui bg-white/70 px-4 py-10 shadow-sm ring-1 ring-black/5 lg:px-8">
         <Testimonials />
         <div className="mt-6">
           <a
             href={whatsappHref}
-            className="inline-flex items-center justify-center rounded-full border border-primary px-4 py-2 text-sm font-semibold text-primary"
+            className="inline-flex items-center justify-center rounded-full border border-primary/40 bg-white px-4 py-2 text-sm font-semibold text-primary"
           >
             Hacer pedido
           </a>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 lg:px-8">
+      <section className="mx-auto max-w-6xl rounded-ui bg-white/70 px-4 py-10 shadow-sm ring-1 ring-black/5 lg:px-8">
         <FaqAccordion />
         <div className="mt-6">
           <a
             href={whatsappHref}
-            className="inline-flex items-center justify-center rounded-full border border-primary px-4 py-2 text-sm font-semibold text-primary"
+            className="inline-flex items-center justify-center rounded-full border border-primary/40 bg-white px-4 py-2 text-sm font-semibold text-primary"
           >
             Hacer pedido
           </a>
         </div>
       </section>
 
-      <section id="contacto" className="mx-auto max-w-6xl space-y-6 px-4 lg:px-8">
+      <section id="contacto" className="mx-auto max-w-6xl space-y-6 rounded-ui bg-white/70 px-4 py-10 shadow-sm ring-1 ring-black/5 lg:px-8">
         <div>
           <h2 className="text-3xl font-semibold text-primary">Dónde estamos</h2>
           <p className="text-sm text-muted">Vení a retirar o consultanos por envío.</p>
@@ -303,7 +281,7 @@ export const HomePage = ({ menuType }: HomePageProps) => {
               href={`https://www.google.com/maps?q=${encodeURIComponent(site.contact.mapQuery)}`}
               target="_blank"
               rel="noopener"
-              className="inline-flex items-center justify-center rounded-full border border-primary px-4 py-2 text-sm font-semibold text-primary"
+              className="inline-flex items-center justify-center rounded-full border border-primary/40 bg-white px-4 py-2 text-sm font-semibold text-primary"
             >
               Cómo llegar
             </a>

@@ -1,11 +1,11 @@
 :root {
   color-scheme: light;
-  --color-primary: #111111;
-  --color-secondary: #f6efd8;
-  --color-accent: #c73a2d;
+  --color-primary: #2b2b2b;
+  --color-secondary: #fff7ef;
+  --color-accent: #d6661f;
   --color-text: #2b2b2b;
-  --color-muted: #6b6b6b;
-  --color-soft: #e9e1c6;
+  --color-muted: #857a72;
+  --color-soft: #fde9d8;
   --radius: 16px;
   --shadow: 0 18px 40px rgba(17, 17, 17, 0.12);
   --font-display: "Cinzel", "Playfair Display", serif;

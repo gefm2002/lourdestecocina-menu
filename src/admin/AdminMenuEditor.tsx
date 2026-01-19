@@ -356,6 +356,14 @@ const ItemForm = ({
   const [tags, setTags] = useState(item?.tags.join(", ") ?? "");
   const [isActive, setIsActive] = useState(item?.isActive ?? true);
   const [order, setOrder] = useState(item?.order ?? 1);
+  const [image, setImage] = useState(item?.image ?? "");
+
+  const handleImageUpload = (file: File | null) => {
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => setImage(String(reader.result));
+    reader.readAsDataURL(file);
+  };
 
   return (
     <form
@@ -376,6 +384,7 @@ const ItemForm = ({
               .split(",")
               .map((tag) => tag.trim())
               .filter(Boolean),
+            image: image.trim() || undefined,
           },
           mode
         );
@@ -394,6 +403,28 @@ const ItemForm = ({
         value={description}
         onChange={(event) => setDescription(event.target.value)}
       />
+      <div className="grid gap-3 sm:grid-cols-2">
+        <input
+          className="w-full rounded-full border border-black/10 px-4 py-2 text-sm"
+          placeholder="URL de imagen (opcional)"
+          value={image}
+          onChange={(event) => setImage(event.target.value)}
+        />
+        <label className="flex items-center justify-center rounded-full border border-black/10 bg-white px-4 py-2 text-sm text-muted">
+          <input
+            type="file"
+            accept="image/*"
+            className="hidden"
+            onChange={(event) => handleImageUpload(event.target.files?.[0] ?? null)}
+          />
+          Subir imagen
+        </label>
+      </div>
+      {image && (
+        <div className="rounded-2xl border border-black/10 bg-white p-3">
+          <img src={image} alt={name || "Preview"} className="h-24 w-24 rounded-xl object-cover" />
+        </div>
+      )}
       <div className="grid gap-3 sm:grid-cols-2">
         <input
           className="w-full rounded-full border border-black/10 px-4 py-2 text-sm"

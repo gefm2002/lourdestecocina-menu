@@ -6,6 +6,7 @@ export type MenuItem = {
   isActive: boolean;
   order: number;
   tags: string[];
+  image?: string;
 };
 
 export type MenuCategory = {
@@ -42,5 +43,6 @@ export type CartItem = {
   variant?: string;
   price: number;
   qty: number;
+  image?: string;
   notes?: string;
 };

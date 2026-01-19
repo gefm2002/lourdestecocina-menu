@@ -10,7 +10,7 @@ export default {
         text: "var(--color-text)",
         muted: "var(--color-muted)",
         soft: "var(--color-soft)",
-      },
+        },
       borderRadius: {
         ui: "var(--radius)",
       },
