@@ -16,7 +16,7 @@ export const MobileMenuDrawer = ({ site, isOpen, onClose }: MobileMenuDrawerProp
         <div className="mb-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 overflow-hidden rounded-full border border-black/10 bg-primary">
-              <img src="/images/logo.png" alt="Manducar" className="h-full w-full object-cover" />
+              <img src="/images/logo.svg" alt="Manducar" className="h-full w-full object-cover" />
             </div>
             <div>
               <p className="text-sm font-semibold text-primary">{site.brand.name}</p>

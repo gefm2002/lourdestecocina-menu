@@ -28,7 +28,7 @@ export const HeaderSticky = ({ site, onCartClick, onMenuClick }: HeaderStickyPro
           </button>
           <Link to="/" className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-black/10 bg-primary">
-              <img src="/images/logo.png" alt="Manducar" className="h-full w-full object-cover" />
+              <img src="/images/logo.svg" alt="Manducar" className="h-full w-full object-cover" />
             </div>
             <div className="hidden sm:block">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
