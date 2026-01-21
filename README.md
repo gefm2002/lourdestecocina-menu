@@ -2,6 +2,10 @@
 
 SPA hecha con Vite + React + TypeScript + Tailwind para menú y carrito con admin local.
 
+## Tipo de proyecto
+
+- Menú digital + carrito con admin local.
+
 ## Stack
 
 - Vite + React + TypeScript
