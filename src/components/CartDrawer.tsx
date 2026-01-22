@@ -121,6 +121,8 @@ export const CartDrawer = ({ site, isOpen, onClose }: CartDrawerProps) => {
               </div>
             </div>
           ))}
+        </div>
+
         <div className="rounded-ui border border-black/10 bg-soft/60 p-4">
           <div className="flex items-center justify-between text-sm font-semibold text-primary">
             <span>Total</span>
