@@ -15,6 +15,13 @@ const initialCustomer = {
   phone: "",
   address: "",
   deliveryMethod: "retiro" as "retiro" | "envio",
+  paymentMethod: "efectivo" as
+    | "efectivo"
+    | "tarjeta"
+    | "transferencia"
+    | "modo"
+    | "mercado"
+    | "billeteras-qr",
   notes: "",
 };
 
@@ -30,6 +37,7 @@ export const CartDrawer = ({ site, isOpen, onClose }: CartDrawerProps) => {
       phone: customer.phone,
       address: customer.address,
       deliveryMethod: customer.deliveryMethod,
+      paymentMethod: customer.paymentMethod,
       notes: customer.notes,
     });
     return buildWhatsAppLink(site.contact.whatsapp, message);
@@ -39,8 +47,8 @@ export const CartDrawer = ({ site, isOpen, onClose }: CartDrawerProps) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-end bg-black/40 backdrop-blur-sm p-0 lg:items-center lg:justify-center lg:p-6">
-      <div className="h-full w-full bg-white/95 p-6 shadow-soft lg:h-auto lg:max-h-[90vh] lg:max-w-2xl lg:rounded-ui lg:border lg:border-black/10">
-        <div className="flex items-center justify-between">
+      <div className="flex h-full w-full flex-col bg-white/95 shadow-soft lg:h-auto lg:max-h-[90vh] lg:max-w-2xl lg:rounded-ui lg:border lg:border-black/10">
+        <div className="flex items-center justify-between px-6 pb-4 pt-6">
           <h2 className="text-2xl font-semibold text-primary">Tu carrito</h2>
           <button
             type="button"
@@ -51,7 +59,7 @@ export const CartDrawer = ({ site, isOpen, onClose }: CartDrawerProps) => {
           </button>
         </div>
 
-        <div className="mt-6 space-y-4 overflow-y-auto lg:max-h-[50vh]">
+        <div className="flex-1 space-y-6 overflow-y-auto px-6 pb-6">
           {items.length === 0 && (
             <p className="text-sm text-muted">Todavía no agregaste productos.</p>
           )}
@@ -113,16 +121,14 @@ export const CartDrawer = ({ site, isOpen, onClose }: CartDrawerProps) => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-6 rounded-ui border border-black/10 bg-soft/60 p-4">
+        <div className="rounded-ui border border-black/10 bg-soft/60 p-4">
           <div className="flex items-center justify-between text-sm font-semibold text-primary">
             <span>Total</span>
             <span>{formatPrice(total)}</span>
           </div>
         </div>
 
-        <div className="mt-6 space-y-3 rounded-ui border border-black/10 bg-white p-4 shadow-sm">
+        <div className="space-y-3 rounded-ui border border-black/10 bg-white p-4 shadow-sm">
           <h3 className="text-lg font-semibold text-primary">Tus datos</h3>
           <div className="grid gap-3 md:grid-cols-2">
             <input
@@ -160,6 +166,25 @@ export const CartDrawer = ({ site, isOpen, onClose }: CartDrawerProps) => {
               disabled={customer.deliveryMethod !== "envio"}
             />
           </div>
+          <div className="grid gap-3 md:grid-cols-2">
+            <select
+              className="rounded-full border border-black/10 bg-soft/60 px-4 py-2 text-sm"
+              value={customer.paymentMethod}
+              onChange={(event) =>
+                setCustomer((prev) => ({
+                  ...prev,
+                  paymentMethod: event.target.value as typeof initialCustomer.paymentMethod,
+                }))
+              }
+            >
+              <option value="efectivo">Efectivo</option>
+              <option value="tarjeta">Tarjeta</option>
+              <option value="transferencia">Transferencia</option>
+              <option value="modo">Modo</option>
+              <option value="mercado">Mercado</option>
+              <option value="billeteras-qr">Billeteras QR</option>
+            </select>
+          </div>
           <textarea
             className="min-h-[80px] w-full rounded-2xl border border-black/10 bg-soft/60 px-4 py-3 text-sm"
             placeholder="Observaciones generales"
@@ -168,7 +193,7 @@ export const CartDrawer = ({ site, isOpen, onClose }: CartDrawerProps) => {
           />
         </div>
 
-        <div className="mt-6 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-3 border-t border-black/10 bg-white/95 px-6 py-4 md:flex-row md:items-center md:justify-between">
           <button
             type="button"
             className="rounded-full border border-primary/30 bg-white px-4 py-2 text-sm text-primary shadow-sm"

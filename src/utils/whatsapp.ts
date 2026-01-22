@@ -6,6 +6,13 @@ type CustomerInfo = {
   phone: string;
   address?: string;
   deliveryMethod: "retiro" | "envio";
+  paymentMethod:
+    | "efectivo"
+    | "tarjeta"
+    | "transferencia"
+    | "modo"
+    | "mercado"
+    | "billeteras-qr";
   notes?: string;
 };
 
@@ -16,6 +23,14 @@ export const buildWhatsAppLink = (phone: string, message: string) => {
 };
 
 export const buildCartMessage = (items: CartItem[], total: number, info: CustomerInfo) => {
+  const paymentLabels: Record<CustomerInfo["paymentMethod"], string> = {
+    efectivo: "Efectivo",
+    tarjeta: "Tarjeta",
+    transferencia: "Transferencia",
+    modo: "Modo",
+    mercado: "Mercado",
+    "billeteras-qr": "Billeteras QR",
+  };
   const lines = [
     "Hola Manducar, quiero hacer un pedido.",
     "",
@@ -32,6 +47,7 @@ export const buildCartMessage = (items: CartItem[], total: number, info: Custome
     `Nombre: ${info.name}`,
     `Teléfono: ${info.phone}`,
     `Método: ${info.deliveryMethod === "retiro" ? "Retiro" : "Consultar envío"}`,
+    `Medio de pago: ${paymentLabels[info.paymentMethod]}`,
   ];
 
   if (info.address && info.deliveryMethod === "envio") {
