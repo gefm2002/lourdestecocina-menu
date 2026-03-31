@@ -15,8 +15,8 @@ export const MobileMenuDrawer = ({ site, isOpen, onClose }: MobileMenuDrawerProp
       <div className="absolute left-0 top-0 h-full w-72 bg-secondary p-6 shadow-soft">
         <div className="mb-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 overflow-hidden rounded-full border border-black/10 bg-primary">
-              <img src="/images/logo.svg" alt="Manducar" className="h-full w-full object-cover" />
+            <div className="h-10 w-10 overflow-hidden rounded-full border border-black/10 bg-white">
+              <img src="/images/logo.png" alt="Lourdes te Cocina" className="h-full w-full object-cover" />
             </div>
             <div>
               <p className="text-sm font-semibold text-primary">{site.brand.name}</p>

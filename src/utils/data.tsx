@@ -16,9 +16,9 @@ type DataContextValue = {
 
 const DataContext = createContext<DataContextValue | null>(null);
 
-const SITE_KEY = "manducar:site";
-const MENU_MEDIODIA_KEY = "manducar:menu:mediodia";
-const MENU_NOCTURNO_KEY = "manducar:menu:nocturno";
+const SITE_KEY = "lourdestecocina:site";
+const MENU_MEDIODIA_KEY = "lourdestecocina:menu:mediodia";
+const MENU_NOCTURNO_KEY = "lourdestecocina:menu:nocturno";
 
 export const DataProvider = ({ children }: { children: React.ReactNode }) => {
   const [site, setSite] = useStoredState<SiteData>(SITE_KEY, baseSite);

@@ -6,6 +6,6 @@
   <path d="M240 510C290 460 350 430 420 430C490 430 570 470 620 520" stroke="#6B6B6B" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10"/>
   <path d="M720 260C770 210 830 180 900 180C970 180 1050 220 1100 270" stroke="#6B6B6B" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10"/>
   <rect x="340" y="220" width="520" height="260" rx="24" fill="#FFFFFF" opacity="0.9"/>
-  <text x="600" y="330" text-anchor="middle" font-family="Cinzel, serif" font-size="44" fill="#111111">Manducar</text>
-  <text x="600" y="380" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" fill="#6B6B6B">Comidas caseras</text>
+  <text x="600" y="330" text-anchor="middle" font-family="Cinzel, serif" font-size="44" fill="#111111">Lourdes te Cocina</text>
+  <text x="600" y="380" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" fill="#6B6B6B">Rotisería y viandas</text>
 </svg>

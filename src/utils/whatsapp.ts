@@ -32,7 +32,7 @@ export const buildCartMessage = (items: CartItem[], total: number, info: Custome
     "billeteras-qr": "Billeteras QR",
   };
   const lines = [
-    "Hola Manducar, quiero hacer un pedido.",
+    "Hola Lourdes te Cocina, quiero hacer un pedido.", 
     "",
     "Detalle:",
     ...items.map((item) => {

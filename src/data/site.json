@@ -1,17 +1,17 @@
 {
   "brand": {
-    "name": "Manducar",
-    "tagline": "Comidas caseras",
-    "igHandle": "@manducar_comidas"
+    "name": "Lourdes te Cocina",
+    "tagline": "Rotisería - Viandas",
+    "igHandle": "@lourdestecocina"
   },
   "contact": {
-    "whatsapp": "5491141744221",
-    "whatsappDisplay": "11 4174 4221",
-    "phoneDisplay": "11 4731 0897",
-    "address": "Yerbal 5, CABA",
-    "mapQuery": "Yerbal 5, CABA"
+    "whatsapp": "5491153344916",
+    "whatsappDisplay": "11 5334 4916",
+    "phoneDisplay": "11 5334 4916",
+    "address": "Bartolomé Mitre 4438, C1201 Cdad. Autónoma de Buenos Aires",
+    "mapQuery": "Bartolomé Mitre 4438, C1201 Cdad. Autónoma de Buenos Aires"
   },
   "hours": [
-    { "days": "Lunes a Sábado", "time": "11 a 15 hs y 17 a 22 hs" }
+    { "days": "Lunes a Domingo", "time": "Horarios variables, consulta disponibilidad" }
   ]
 }

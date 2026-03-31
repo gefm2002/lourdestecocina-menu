@@ -14,7 +14,7 @@ type CartContextValue = {
 
 const CartContext = createContext<CartContextValue | null>(null);
 
-const STORAGE_KEY = "manducar:cart";
+const STORAGE_KEY = "lourdestecocina:cart";
 
 const getItemKey = (item: CartItem) => `${item.id}:${item.variant ?? ""}`;
 

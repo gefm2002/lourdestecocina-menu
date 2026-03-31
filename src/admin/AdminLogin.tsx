@@ -6,7 +6,7 @@ type AdminLoginProps = {
   onSuccess: () => void;
 };
 
-const AUTH_KEY = "manducar:admin:auth";
+const AUTH_KEY = "lourdestecocina:admin:auth";
 
 export const AdminLogin = ({ onSuccess }: AdminLoginProps) => {
   const [username, setUsername] = useState("");

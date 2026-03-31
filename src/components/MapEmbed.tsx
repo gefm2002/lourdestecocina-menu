@@ -7,7 +7,7 @@ export const MapEmbed = ({ query }: MapEmbedProps) => {
   return (
     <div className="overflow-hidden rounded-ui border border-black/10">
       <iframe
-        title="Mapa Manducar"
+        title="Mapa Lourdes te Cocina"
         src={src}
         className="h-72 w-full"
         loading="lazy"

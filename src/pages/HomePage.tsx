@@ -49,13 +49,13 @@ export const HomePage = ({ menuType }: HomePageProps) => {
   };
 
   const handleConsult = (itemName: string) => {
-    const message = `Hola Manducar, quería consultar por ${itemName}. ¿Me pasás disponibilidad de hoy?`;
+    const message = `Hola Lourdes te Cocina, quería consultar por ${itemName}. ¿Me pasás disponibilidad de hoy?`;
     const url = `https://wa.me/${site.contact.whatsapp}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
 
   const whatsappHref = `https://wa.me/${site.contact.whatsapp}?text=${encodeURIComponent(
-    "Hola Manducar, quiero hacer un pedido. ¿Me pasás disponibilidad de hoy?"
+    "Hola Lourdes te Cocina, quiero hacer un pedido. ¿Me pasás disponibilidad de hoy?"
   )}`;
 
   return (
@@ -67,7 +67,7 @@ export const HomePage = ({ menuType }: HomePageProps) => {
               {site.brand.name} | {site.brand.tagline}
             </p>
             <h1 className="text-4xl font-semibold text-primary sm:text-5xl">
-              Comidas caseras en Caballito
+              Comidas caseras a tu barrio
             </h1>
             <p className="text-base text-muted">
               Elegí del menú y mandá tu pedido por WhatsApp. Retiro o consulta de envío.
@@ -106,7 +106,7 @@ export const HomePage = ({ menuType }: HomePageProps) => {
           <div className="relative">
             <img
               src="/images/stock-1.jpg"
-              alt="Comidas caseras Manducar"
+              alt="Comidas caseras Lourdes te Cocina"
               className="w-full rounded-ui border border-black/10"
             />
           </div>

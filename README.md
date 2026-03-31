@@ -1,4 +1,4 @@
-# Manducar · Menú y pedidos
+# Lourdes te Cocina · Menú y pedidos
 
 SPA hecha con Vite + React + TypeScript + Tailwind para menú y carrito con admin local.
 

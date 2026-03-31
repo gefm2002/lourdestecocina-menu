@@ -6,7 +6,7 @@ import { AdminExport } from "./AdminExport";
 import { useData } from "../utils/data";
 import { readStorage, removeStorage } from "../utils/storage";
 
-const AUTH_KEY = "manducar:admin:auth";
+const AUTH_KEY = "lourdestecocina:admin:auth";
 
 type View = "mediodia" | "nocturno" | "site" | "export";
 
@@ -28,7 +28,7 @@ export const AdminLayout = () => {
     <div className="min-h-screen bg-secondary">
       <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 lg:grid-cols-[220px_1fr] lg:px-8">
         <aside className="rounded-ui border border-black/10 bg-white p-4">
-          <p className="text-sm font-semibold text-primary">Admin Manducar</p>
+          <p className="text-sm font-semibold text-primary">Admin Lourdes</p>
           <nav className="mt-4 flex flex-col gap-2 text-sm">
             <button
               type="button"
