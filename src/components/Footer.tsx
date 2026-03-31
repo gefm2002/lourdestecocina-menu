@@ -12,7 +12,7 @@ export const Footer = ({ site }: FooterProps) => {
           <div>
             <p className="text-lg font-semibold text-primary">{site.brand.name}</p>
             <p className="text-sm text-muted">{site.brand.tagline}</p>
-            <p className="mt-2 text-sm text-muted">Instagram {site.brand.igHandle}</p>
+            <a href={`https://www.instagram.com/${site.brand.igHandle}`} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-sm text-muted hover:underline">Instagram @{site.brand.igHandle}</a>
           </div>
           <div>
             <p className="text-sm font-semibold text-primary">Contacto</p>
