@@ -1,39 +1,669 @@
 {
   "categories": [
     {
-      "id": "empanadas",
-      "name": "Empanadas",
+      "id": "entradas",
+      "name": "Entradas",
       "order": 1,
       "isActive": true,
       "items": [
         {
-          "id": "empanada-de-carne",
-          "name": "Empanada de carne",
-          "description": "Receta casera con cebolla y especias",
-          "price": 650,
+          "id": "croquetas-espinaca",
+          "name": "6 Croquetas de espinaca y queso",
+          "description": "",
+          "price": 6000,
+          "isActive": true,
+          "order": 1,
+          "tags": ["recomendado", "veggie"]
+        },
+        {
+          "id": "brocoli-bechamel",
+          "name": "Brócoli con bechamel y parmesano gratinado",
+          "description": "",
+          "price": 5500,
+          "isActive": true,
+          "order": 2,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "aros-cebolla",
+          "name": "Aros de cebolla rebozados",
+          "description": "",
+          "price": 6000,
+          "isActive": true,
+          "order": 3,
+          "tags": []
+        },
+        {
+          "id": "matambre-pollo",
+          "name": "Matambre arrollado de pollo (3 rodajas)",
+          "description": "",
+          "price": 7500,
+          "isActive": true,
+          "order": 4,
+          "tags": ["recomendado"]
+        },
+        {
+          "id": "matambre-ternera",
+          "name": "Matambre arrollado de ternera (3 rodajas)",
+          "description": "",
+          "price": 9000,
+          "isActive": true,
+          "order": 5,
+          "tags": []
+        },
+        {
+          "id": "matambre-cerdo",
+          "name": "Matambre arrollado de cerdo (3 rodajas)",
+          "description": "",
+          "price": 11000,
+          "isActive": true,
+          "order": 6,
+          "tags": []
+        },
+        {
+          "id": "berenjena-escabeche",
+          "name": "Berenjena al escabeche",
+          "description": "",
+          "price": 8000,
+          "isActive": true,
+          "order": 7,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "lengua-escabeche",
+          "name": "Lengua al escabeche",
+          "description": "",
+          "price": 10000,
+          "isActive": true,
+          "order": 8,
+          "tags": []
+        },
+        {
+          "id": "verduras-grilladas",
+          "name": "Verduras grilladas",
+          "description": "",
+          "price": 4000,
+          "isActive": true,
+          "order": 9,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "peceto-criolla",
+          "name": "Peceto a la criolla",
+          "description": "",
+          "price": 12000,
+          "isActive": true,
+          "order": 10,
+          "tags": []
+        },
+        {
+          "id": "vitel-tone",
+          "name": "Vitel Toné",
+          "description": "",
+          "price": 14000,
+          "isActive": true,
+          "order": 11,
+          "tags": ["recomendado"]
+        }
+      ]
+    },
+    {
+      "id": "platos-dia",
+      "name": "Platos del día",
+      "order": 2,
+      "isActive": true,
+      "items": [
+        {
+          "id": "arroz-azafranado-pollo",
+          "name": "Arroz azafranado con pollo",
+          "description": "",
+          "price": 10000,
+          "isActive": true,
+          "order": 1,
+          "tags": ["recomendado"]
+        },
+        {
+          "id": "pastel-papa",
+          "name": "Pastel de papa",
+          "description": "",
+          "price": 7000,
+          "isActive": true,
+          "order": 2,
+          "tags": []
+        },
+        {
+          "id": "pastel-calabaza",
+          "name": "Pastel de calabaza",
+          "description": "",
+          "price": 7000,
+          "isActive": true,
+          "order": 3,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "noquis",
+          "name": "Ñoquis",
+          "description": "",
+          "price": 10000,
+          "isActive": true,
+          "order": 4,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "albondigas-guarnicion",
+          "name": "Albóndigas de ternera con guarnición",
+          "description": "",
+          "price": 12000,
+          "isActive": true,
+          "order": 5,
+          "tags": []
+        },
+        {
+          "id": "canelones",
+          "name": "Canelones",
+          "description": "",
+          "price": 10000,
+          "isActive": true,
+          "order": 6,
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "principales",
+      "name": "Principales",
+      "order": 3,
+      "isActive": true,
+      "items": [
+        {
+          "id": "cuarto-pollo",
+          "name": "Cuarto de pollo (pechuga o pata)",
+          "description": "",
+          "price": 6000,
           "isActive": true,
           "order": 1,
           "tags": []
         },
         {
-          "id": "empanada-de-verdura",
-          "name": "Empanada de verdura",
-          "description": "Espinaca, zanahoria, queso",
-          "price": 650,
+          "id": "pechuga-grille",
+          "name": "Pechuga grillé",
+          "description": "",
+          "price": 6000,
           "isActive": true,
           "order": 2,
-          "tags": [
-            "veggie"
-          ]
+          "tags": []
         },
         {
-          "id": "empanada-de-pollo",
-          "name": "Empanada de pollo",
-          "description": "Pollo desmenuzado con especias",
-          "price": 650,
+          "id": "pan-carne",
+          "name": "Pan de carne",
+          "description": "",
+          "price": 8500,
+          "isActive": true,
+          "order": 3,
+          "tags": ["recomendado"]
+        },
+        {
+          "id": "bife-bondiola",
+          "name": "Bife de bondiola",
+          "description": "",
+          "price": 10000,
+          "isActive": true,
+          "order": 4,
+          "tags": []
+        },
+        {
+          "id": "medallon-ojo-bife",
+          "name": "Medallón ojo de bife",
+          "description": "",
+          "price": 15000,
+          "isActive": true,
+          "order": 5,
+          "tags": []
+        },
+        {
+          "id": "bife-chorizo",
+          "name": "Bife de chorizo",
+          "description": "",
+          "price": 14000,
+          "isActive": true,
+          "order": 6,
+          "tags": []
+        },
+        {
+          "id": "lomo-grillado",
+          "name": "Lomo grillado",
+          "description": "",
+          "price": 16000,
+          "isActive": true,
+          "order": 7,
+          "tags": []
+        },
+        {
+          "id": "pollo-horno-fritas",
+          "name": "Pollo al horno con fritas",
+          "description": "",
+          "price": 22000,
+          "isActive": true,
+          "order": 8,
+          "tags": ["recomendado"]
+        }
+      ]
+    },
+    {
+      "id": "guarniciones",
+      "name": "Guarniciones",
+      "order": 4,
+      "isActive": true,
+      "items": [
+        {
+          "id": "papas-fritas",
+          "name": "Papas fritas",
+          "description": "",
+          "price": 4000,
+          "isActive": true,
+          "order": 1,
+          "tags": []
+        },
+        {
+          "id": "papas-horno",
+          "name": "Papas al horno",
+          "description": "",
+          "price": 4000,
+          "isActive": true,
+          "order": 2,
+          "tags": []
+        },
+        {
+          "id": "batata-horno",
+          "name": "Batata al horno",
+          "description": "",
+          "price": 4000,
           "isActive": true,
           "order": 3,
           "tags": []
+        },
+        {
+          "id": "pure-papa-calabaza",
+          "name": "Puré de papa o calabaza",
+          "description": "",
+          "price": 4000,
+          "isActive": true,
+          "order": 4,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "ensalada-rusa",
+          "name": "Ensalada rusa",
+          "description": "",
+          "price": 4000,
+          "isActive": true,
+          "order": 5,
+          "tags": []
+        },
+        {
+          "id": "pure-mixto",
+          "name": "Puré mixto",
+          "description": "",
+          "price": 4000,
+          "isActive": true,
+          "order": 6,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "panache-verduras",
+          "name": "Panaché de verduras",
+          "description": "",
+          "price": 4000,
+          "isActive": true,
+          "order": 7,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "papa-hervida",
+          "name": "Papa hervida",
+          "description": "",
+          "price": 4000,
+          "isActive": true,
+          "order": 8,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "arroz-blanco",
+          "name": "Arroz blanco",
+          "description": "",
+          "price": 4000,
+          "isActive": true,
+          "order": 9,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "vegetales-asados-chico",
+          "name": "Vegetales asados porción chica",
+          "description": "",
+          "price": 3500,
+          "isActive": true,
+          "order": 10,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "vegetales-asados-mediano",
+          "name": "Vegetales asados porción mediana",
+          "description": "",
+          "price": 5500,
+          "isActive": true,
+          "order": 11,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "vegetales-asados-grande",
+          "name": "Vegetales asados porción grande",
+          "description": "",
+          "price": 7500,
+          "isActive": true,
+          "order": 12,
+          "tags": ["veggie"]
+        }
+      ]
+    },
+    {
+      "id": "ensaladas",
+      "name": "Ensaladas",
+      "order": 5,
+      "isActive": true,
+      "items": [
+        {
+          "id": "ensalada-rucula-zanahoria",
+          "name": "Ensalada rúcula y zanahoria",
+          "description": "",
+          "price": 8000,
+          "isActive": true,
+          "order": 1,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "caesar-pollo",
+          "name": "Caesar con pollo",
+          "description": "Mix lechuga, rúcula, crutones y parmesano.",
+          "price": 10000,
+          "isActive": true,
+          "order": 2,
+          "tags": ["recomendado"]
+        },
+        {
+          "id": "capresse",
+          "name": "Capresse",
+          "description": "Boconccino, tomate cherry, albahaca, aceitunas negras y mix lechuga.",
+          "price": 10000,
+          "isActive": true,
+          "order": 3,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "ensalada-griega",
+          "name": "Ensalada Griega",
+          "description": "Lechuga, cherry, olivas verdes y negras, pepino, muzarella y cebolla morada.",
+          "price": 10000,
+          "isActive": true,
+          "order": 4,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "ensalada-andina",
+          "name": "Ensalada andina",
+          "description": "Quinoa, tomates cherry, queso feta y mix lechuga.",
+          "price": 10000,
+          "isActive": true,
+          "order": 5,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "ensalada-consultar-1",
+          "name": "Lentejas, huevo, zanahoria rallada, choclo y arveja",
+          "description": "",
+          "price": null,
+          "isActive": true,
+          "order": 6,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "ensalada-consultar-2",
+          "name": "Arroz, chauchas, tomate cherry, choclo, arvejas, jamón, queso pategrás",
+          "description": "",
+          "price": null,
+          "isActive": true,
+          "order": 7,
+          "tags": []
+        },
+        {
+          "id": "ensalada-consultar-3",
+          "name": "Rusa con cubos de pollo",
+          "description": "",
+          "price": null,
+          "isActive": true,
+          "order": 8,
+          "tags": []
+        },
+        {
+          "id": "ensalada-consultar-4",
+          "name": "Arroz, atún y mayonesa",
+          "description": "",
+          "price": null,
+          "isActive": true,
+          "order": 9,
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "tortillas",
+      "name": "Tortillas",
+      "order": 6,
+      "isActive": true,
+      "items": [
+        {
+          "id": "tortilla-papa",
+          "name": "Tortilla de papa",
+          "description": "",
+          "price": 6000,
+          "isActive": true,
+          "order": 1,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "tortilla-espanola",
+          "name": "Tortilla a la española",
+          "description": "",
+          "price": 8000,
+          "isActive": true,
+          "order": 2,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "tortilla-papa-espinaca",
+          "name": "Tortilla de papa y espinaca",
+          "description": "",
+          "price": 8000,
+          "isActive": true,
+          "order": 3,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "tortilla-jamon-muzza",
+          "name": "Tortilla de papa rellena de jamón y Muzarella",
+          "description": "",
+          "price": 8000,
+          "isActive": true,
+          "order": 4,
+          "tags": []
+        },
+        {
+          "id": "tortilla-espinaca",
+          "name": "Tortilla de espinaca",
+          "description": "",
+          "price": 10000,
+          "isActive": true,
+          "order": 5,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "porcion-tortilla-papa",
+          "name": "Porción de tortilla de papa",
+          "description": "",
+          "price": 3000,
+          "isActive": true,
+          "order": 6,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "porcion-tortilla-rellena",
+          "name": "Porción de tortilla de papa rellena de jamón y Muzarella",
+          "description": "",
+          "price": 4000,
+          "isActive": true,
+          "order": 7,
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "tartas",
+      "name": "Tartas",
+      "order": 7,
+      "isActive": true,
+      "items": [
+        {
+          "id": "tarta-jamon-queso",
+          "name": "Jamón y queso",
+          "description": "",
+          "price": 7000,
+          "isActive": true,
+          "order": 1,
+          "tags": []
+        },
+        {
+          "id": "tarta-pollo-puerro",
+          "name": "Pollo puerro panceta",
+          "description": "",
+          "price": 7000,
+          "isActive": true,
+          "order": 2,
+          "tags": []
+        },
+        {
+          "id": "tarta-espinaca",
+          "name": "Espinaca y queso",
+          "description": "",
+          "price": 7000,
+          "isActive": true,
+          "order": 3,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "tarta-calabaza",
+          "name": "Calabaza y queso",
+          "description": "",
+          "price": 7000,
+          "isActive": true,
+          "order": 4,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "tarta-humita",
+          "name": "Humita",
+          "description": "",
+          "price": 7000,
+          "isActive": true,
+          "order": 5,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "tarta-capresse",
+          "name": "Capresse",
+          "description": "",
+          "price": 7000,
+          "isActive": true,
+          "order": 6,
+          "tags": ["veggie"]
+        }
+      ]
+    },
+    {
+      "id": "veggie",
+      "name": "Menú veggie",
+      "order": 8,
+      "isActive": true,
+      "items": [
+        {
+          "id": "zapallitos-rellenos",
+          "name": "Zapallitos rellenos",
+          "description": "",
+          "price": 7500,
+          "isActive": true,
+          "order": 1,
+          "tags": ["veggie", "recomendado"]
+        },
+        {
+          "id": "calabaza-capresse",
+          "name": "Calabaza capresse",
+          "description": "",
+          "price": 7500,
+          "isActive": true,
+          "order": 2,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "wok-verduras",
+          "name": "Wok de verduras",
+          "description": "",
+          "price": 7500,
+          "isActive": true,
+          "order": 3,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "berenjena-napolitana",
+          "name": "Berenjena Napolitana asada",
+          "description": "Con vegetales salteados.",
+          "price": 6500,
+          "isActive": true,
+          "order": 4,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "morron-espinaca",
+          "name": "Morrón asado espinaca muzza y huevo",
+          "description": "",
+          "price": 6500,
+          "isActive": true,
+          "order": 5,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "veggie-provoleta",
+          "name": "Veggie provoleta, morrón y rúcula",
+          "description": "",
+          "price": 7000,
+          "isActive": true,
+          "order": 6,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "risotto-verduras",
+          "name": "Risotto de verduras y champiñones",
+          "description": "",
+          "price": 16000,
+          "isActive": true,
+          "order": 7,
+          "tags": ["veggie"]
+        },
+        {
+          "id": "calabaza-rellena",
+          "name": "Calabaza rellena",
+          "description": "Espinaca, choclo, parmesano y puré de calabaza.",
+          "price": 10000,
+          "isActive": true,
+          "order": 8,
+          "tags": ["veggie", "recomendado"]
         }
       ]
     }
