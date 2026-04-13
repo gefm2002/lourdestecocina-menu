@@ -1,5 +1,6 @@
-import type { CartItem } from "../types";
+import type { CartItem, Institution, InstitutionUser, InstitutionalOrder } from "../types";
 import { formatPrice } from "./format";
+import { formatLongDate } from "./institutional";
 
 type CustomerInfo = {
   name: string;
@@ -32,7 +33,7 @@ export const buildCartMessage = (items: CartItem[], total: number, info: Custome
     "billeteras-qr": "Billeteras QR",
   };
   const lines = [
-    "Hola Lourdes te Cocina, quiero hacer un pedido.", 
+    "Hola Lourdes te Cocina, quiero hacer un pedido.",
     "",
     "Detalle:",
     ...items.map((item) => {
@@ -57,6 +58,50 @@ export const buildCartMessage = (items: CartItem[], total: number, info: Custome
   if (info.notes) {
     lines.push(`Observaciones: ${info.notes}`);
   }
+
+  return lines.join("\n");
+};
+
+export const buildInstitutionalOrderMessage = ({
+  order,
+  institution,
+  user,
+}: {
+  order: InstitutionalOrder;
+  institution: Institution;
+  user: InstitutionUser;
+}) => {
+  const groupedByDate = order.selections.reduce<Record<string, InstitutionalOrder["selections"]>>(
+    (acc, selection) => {
+      acc[selection.date] = [...(acc[selection.date] ?? []), selection];
+      return acc;
+    },
+    {}
+  );
+
+  const lines = [
+    "Hola Lourdes te Cocina, envío comanda institucional.",
+    "",
+    `Orden: ${order.id}`,
+    `Institución: ${institution.name}`,
+    `Usuario: ${user.firstName} ${user.lastName}`,
+    `Email: ${user.email}`,
+    `Teléfono: ${user.phone}`,
+    "",
+    "Detalle por día:",
+  ];
+
+  Object.entries(groupedByDate)
+    .sort(([left], [right]) => left.localeCompare(right))
+    .forEach(([date, selections]) => {
+      lines.push(`${formatLongDate(date)}:`);
+      selections.forEach((selection) => {
+        lines.push(`- ${selection.sectionName}: ${selection.name} (${formatPrice(selection.unitPrice)})`);
+      });
+      lines.push("");
+    });
+
+  lines.push(`Total institucional: ${formatPrice(order.total)}`);
 
   return lines.join("\n");
 };

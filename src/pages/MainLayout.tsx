@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { CartDrawer } from "../components/CartDrawer";
 import { Footer } from "../components/Footer";
 import { HeaderSticky } from "../components/HeaderSticky";
@@ -8,19 +8,34 @@ import { WhatsAppFloatButton } from "../components/WhatsAppFloatButton";
 import { useData } from "../utils/data";
 
 export const MainLayout = () => {
-  const { site } = useData();
+  const location = useLocation();
+  const { site, currentPortalUser } = useData();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const isInstitutionalRoute = location.pathname.startsWith("/institucional");
 
   return (
     <div className="min-h-screen bg-secondary text-text">
       <HeaderSticky
         site={site}
+        currentUserName={
+          currentPortalUser ? `${currentPortalUser.firstName} ${currentPortalUser.lastName}` : undefined
+        }
+        isInstitutionalRoute={isInstitutionalRoute}
         onCartClick={() => setIsCartOpen(true)}
         onMenuClick={() => setIsMenuOpen(true)}
       />
-      <MobileMenuDrawer site={site} isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
-      <CartDrawer site={site} isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+      <MobileMenuDrawer
+        site={site}
+        currentUserName={
+          currentPortalUser ? `${currentPortalUser.firstName} ${currentPortalUser.lastName}` : undefined
+        }
+        isOpen={isMenuOpen}
+        onClose={() => setIsMenuOpen(false)}
+      />
+      {!isInstitutionalRoute && (
+        <CartDrawer site={site} isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+      )}
       <Outlet />
       <Footer site={site} />
       <WhatsAppFloatButton site={site} />

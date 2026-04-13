@@ -3,11 +3,17 @@ import type { SiteData } from "../types";
 
 type MobileMenuDrawerProps = {
   site: SiteData;
+  currentUserName?: string;
   isOpen: boolean;
   onClose: () => void;
 };
 
-export const MobileMenuDrawer = ({ site, isOpen, onClose }: MobileMenuDrawerProps) => {
+export const MobileMenuDrawer = ({
+  site,
+  currentUserName,
+  isOpen,
+  onClose,
+}: MobileMenuDrawerProps) => {
   if (!isOpen) return null;
 
   return (
@@ -38,6 +44,9 @@ export const MobileMenuDrawer = ({ site, isOpen, onClose }: MobileMenuDrawerProp
           </Link>
           <Link to="/nocturno" onClick={onClose}>
             Carta nocturna
+          </Link>
+          <Link to="/institucional" onClick={onClose}>
+            {currentUserName ? `Hola, ${currentUserName.split(" ")[0]}` : "Viandas y grupos"}
           </Link>
           <a href="#menu" onClick={onClose}>
             Menú completo

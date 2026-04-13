@@ -5,11 +5,19 @@ import { CartIcon, MenuIcon, WhatsAppIcon } from "./icons";
 
 type HeaderStickyProps = {
   site: SiteData;
+  currentUserName?: string;
+  isInstitutionalRoute: boolean;
   onCartClick: () => void;
   onMenuClick: () => void;
 };
 
-export const HeaderSticky = ({ site, onCartClick, onMenuClick }: HeaderStickyProps) => {
+export const HeaderSticky = ({
+  site,
+  currentUserName,
+  isInstitutionalRoute,
+  onCartClick,
+  onMenuClick,
+}: HeaderStickyProps) => {
   const { items } = useCart();
   const cartCount = items.reduce((acc, item) => acc + item.qty, 0);
 
@@ -48,6 +56,14 @@ export const HeaderSticky = ({ site, onCartClick, onMenuClick }: HeaderStickyPro
           >
             Carta nocturna
           </NavLink>
+          <NavLink
+            to="/institucional"
+            className={({ isActive }) =>
+              `${isInstitutionalRoute || isActive ? "text-accent" : ""} ${currentUserName ? "font-semibold" : ""}`
+            }
+          >
+            {currentUserName ? `Hola, ${currentUserName.split(" ")[0]}` : "Viandas y grupos"}
+          </NavLink>
           <a href="#menu">Menú completo</a>
           <a href="#contacto">Contacto</a>
           <Link to="/admin" className="text-muted">
@@ -63,19 +79,21 @@ export const HeaderSticky = ({ site, onCartClick, onMenuClick }: HeaderStickyPro
             <WhatsAppIcon className="h-4 w-4" />
             WhatsApp
           </a>
-          <button
-            type="button"
-            onClick={onCartClick}
-            className="relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white text-primary shadow-sm"
-            aria-label="Abrir carrito"
-          >
-            <CartIcon className="h-5 w-5" />
-            {cartCount > 0 && (
-              <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-accent text-[10px] font-semibold text-white">
-                {cartCount}
-              </span>
-            )}
-          </button>
+          {!isInstitutionalRoute && (
+            <button
+              type="button"
+              onClick={onCartClick}
+              className="relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white text-primary shadow-sm"
+              aria-label="Abrir carrito"
+            >
+              <CartIcon className="h-5 w-5" />
+              {cartCount > 0 && (
+                <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-accent text-[10px] font-semibold text-white">
+                  {cartCount}
+                </span>
+              )}
+            </button>
+          )}
         </div>
       </div>
     </header>
